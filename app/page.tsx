@@ -1,10 +1,10 @@
-import { getInfo } from '@/sanity/sanity-utils';
-import Image from 'next/image';
-import Link from 'next/link';
+import { getInfo } from "@/sanity/sanity-utils";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   const infoList = await getInfo();
-  console.log('🚀 ~ file: page.tsx:7 ~ Home ~ infoList:', infoList);
+  console.log("🚀 ~ file: page.tsx:7 ~ Home ~ infoList:", infoList);
 
   return (
     <div className="max-w-5xl mx-auto py-20 px-4">
@@ -14,12 +14,12 @@ export default async function Home() {
         </span>
       </h1>
 
-      <p className="mt-3 text-xl text-gray-600">
+      <p className="mt-3 text-xl text-gray-600 p-2">
         Placeholder text in case it looks good
       </p>
 
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">
-        Placeholder Title - (Info served from Sanity CMS){' '}
+        Placeholder Title - (Info served from Sanity CMS){" "}
       </h2>
       <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {infoList.map((info) => (
